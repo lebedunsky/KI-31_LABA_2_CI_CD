@@ -14,8 +14,20 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           passphrase: ${{ secrets.SERVER_PASSPHRASE }}
-
           script: |
             echo "Starting deploy..."
-            echo "<h1>Привіт, я Тарас, якщо я тут значить все працює</h1>" | sudo tee /var/www/html/index.html
+
+            sudo tee /var/www/html/index.html > /dev/null <<EOF
+            <!DOCTYPE html>
+            <html lang="uk">
+            <head>
+              <meta charset="UTF-8">
+              <title>Test Deploy</title>
+            </head>
+            <body>
+              <h1>Привіт, я Тарас, якщо ви це читаєте у мене все запрацювало</h1>
+            </body>
+            </html>
+            EOF
+
             echo "Deploy successful"
