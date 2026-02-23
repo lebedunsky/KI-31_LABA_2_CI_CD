@@ -23,9 +23,52 @@ jobs:
             <head>
               <meta charset="UTF-8">
               <title>Test Deploy</title>
+              <style>
+                #hidde-div {
+                  display: none;
+                  width: 200px;
+                  height: 100px;
+                  background-color: #4CAF50;
+                  color: white;
+                  text-align: center;
+                  line-height: 100px;
+                  border-radius: 10px;
+                  margin-top: 10px;
+                  transition: all 0.3s ease;
+                }
+              
+                #hidde-div.show {
+                  display: block;
+                }
+              
+                #button {
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  cursor: pointer;
+                  border: none;
+                  background-color: #008CBA;
+                  color: white;
+                  border-radius: 5px;
+                }
+              
+                #button:hover {
+                  background-color: #005f73;
+                }
+              </style>
             </head>
             <body>
               <h1>Hi, I am Taras, everything work.</h1>
+              <button id="button">Click please button</button>
+              <div id="hidde-div">You are the best</div>
+
+            <script>
+              const button = document.getElementById("button");
+              const hiddeDiv = document.getElementById("hidde-div");
+            
+              button.addEventListener("click", () => {
+                hiddeDiv.classList.toggle("show");
+              });
+            </script>
             </body>
             </html>
             EOF
