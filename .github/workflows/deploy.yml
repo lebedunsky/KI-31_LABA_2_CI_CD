@@ -25,7 +25,7 @@ jobs:
               <title>Test Deploy</title>
             </head>
             <body>
-              <h1>Привіт, я Тарас, якщо ви це читаєте у мене все запрацювало</h1>
+              <h1>Hi, I am Taras, everything work.</h1>
             </body>
             </html>
             EOF
