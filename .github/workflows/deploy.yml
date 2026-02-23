@@ -24,6 +24,10 @@ jobs:
               <meta charset="UTF-8">
               <title>Test Deploy</title>
               <style>
+                body {
+                  background-color: blue;
+                }
+                
                 #hidde-div {
                   display: none;
                   width: 200px;
